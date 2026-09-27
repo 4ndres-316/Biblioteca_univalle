@@ -1,0 +1,149 @@
+@model Biblioteca.Models.LoginViewModel
+@{
+    ViewData["Title"] = "Iniciar sesión";
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Iniciar sesión - Biblioteca Univalle Sucre</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <style>
+        :root {
+            --guindo:      #7B1034;
+            --guindo-dark: #5a0b24;
+        }
+
+        body {
+            background: linear-gradient(135deg, var(--guindo) 0%, var(--guindo-dark) 100%);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .login-card {
+            width: 100%;
+            max-width: 420px;
+            border: none;
+            border-radius: 1rem;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.35);
+        }
+
+        .login-header {
+            background: var(--guindo);
+            border-radius: 1rem 1rem 0 0;
+            padding: 2rem;
+            text-align: center;
+            color: white;
+        }
+
+        .login-header svg   { margin-bottom: .75rem; }
+        .login-header h4    { margin: 0; font-weight: 700; letter-spacing: .03em; }
+        .login-header small { opacity: .8; font-size: .78rem; }
+
+        .login-body { padding: 2rem; background: #fff; }
+
+        .form-label { font-weight: 600; color: #444; }
+
+        .form-control:focus {
+            border-color: var(--guindo);
+            box-shadow: 0 0 0 .2rem rgba(123,16,52,.2);
+        }
+
+        .btn-login {
+            background-color: var(--guindo);
+            border-color: var(--guindo);
+            font-weight: 600;
+            padding: .6rem;
+            color: #fff;
+        }
+
+        .btn-login:hover {
+            background-color: var(--guindo-dark);
+            border-color: var(--guindo-dark);
+            color: #fff;
+        }
+
+        .card-footer-custom {
+            background: #f4f4f4;
+            border-radius: 0 0 1rem 1rem;
+            padding: .6rem;
+            text-align: center;
+            font-size: .75rem;
+            color: #6c757d;
+        }
+    </style>
+</head>
+<body>
+    <div class="login-card card">
+
+        <!-- Encabezado guindo -->
+        <div class="login-header">
+            <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" fill="white"
+                 class="bi bi-book-half" viewBox="0 0 16 16">
+                <path d="M8.5 2.687c.654-.689 1.782-.886 3.112-.752 1.234.124 2.503.523 3.388.893v9.923c-.918-.35-2.107-.692-3.287-.81-1.094-.111-2.278-.039-3.213.492zM8 1.783C7.015.936 5.587.81 4.287.94c-1.514.153-3.042.672-3.994 1.105A.5.5 0 0 0 0 2.5v11a.5.5 0 0 0 .707.455c.882-.4 2.303-.881 3.68-1.02 1.409-.142 2.59.087 3.223.877a.5.5 0 0 0 .78 0c.633-.79 1.814-1.019 3.222-.877 1.378.139 2.8.62 3.681 1.02A.5.5 0 0 0 16 13.5v-11a.5.5 0 0 0-.293-.455c-.952-.433-2.48-.952-3.994-1.105C10.413.809 8.985.936 8 1.783"/>
+            </svg>
+            <h4>Biblioteca Univalle</h4>
+            <small>Universidad del Valle &mdash; Sede Sucre</small>
+        </div>
+
+        <!-- Formulario -->
+        <div class="login-body">
+            <h6 class="text-muted mb-3 text-center">Ingresa tus credenciales</h6>
+
+            @if (!ViewData.ModelState.IsValid)
+            {
+                <div class="alert alert-danger alert-dismissible fade show py-2" role="alert">
+                    <asp-validation-summary asp-validation-summary="All" class="mb-0 small"></asp-validation-summary>
+                    <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+                </div>
+            }
+
+            <form asp-controller="Account" asp-action="Login" method="post">
+                <input type="hidden" name="returnUrl" value="@ViewData["ReturnUrl"]" />
+                @Html.AntiForgeryToken()
+
+                <div class="mb-3">
+                    <label asp-for="Usuario" class="form-label"></label>
+                    <input asp-for="Usuario"
+                           class="form-control"
+                           placeholder="Ingresa tu usuario"
+                           autocomplete="username" />
+                    <span asp-validation-for="Usuario" class="text-danger small"></span>
+                </div>
+
+                <div class="mb-3">
+                    <label asp-for="Password" class="form-label"></label>
+                    <input asp-for="Password"
+                           class="form-control"
+                           placeholder="••••••••"
+                           autocomplete="current-password" />
+                    <span asp-validation-for="Password" class="text-danger small"></span>
+                </div>
+
+                <div class="mb-4 form-check">
+                    <input asp-for="RememberMe" class="form-check-input" />
+                    <label asp-for="RememberMe" class="form-check-label text-muted small"></label>
+                </div>
+
+                <button type="submit" class="btn btn-login w-100">
+                    Iniciar sesión
+                </button>
+            </form>
+        </div>
+
+        <div class="card-footer-custom">
+            &copy; 2026 Univalle Sede Sucre
+        </div>
+    </div>
+
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/jquery-validation/dist/jquery.validate.min.js"></script>
+    <script src="~/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.js"></script>
+</body>
+</html>

@@ -3,24 +3,24 @@
   "WorkspaceRootPath": "C:\\Users\\ACER NITRO V 15\\source\\repos\\Biblioteca\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{72255802-A029-4BD3-AEF0-F9D5A6DA5CC1}|Biblioteca\\Biblioteca.csproj|c:\\users\\acer nitro v 15\\source\\repos\\biblioteca\\biblioteca\\areas\\identity\\pages\\_viewstart.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{72255802-A029-4BD3-AEF0-F9D5A6DA5CC1}|Biblioteca\\Biblioteca.csproj|solutionrelative:biblioteca\\areas\\identity\\pages\\_viewstart.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\ACER NITRO V 15\\source\\repos\\Biblioteca\\Biblioteca\\Migrations\\20260927034356_Init.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Biblioteca\\Migrations\\20260927034356_Init.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{72255802-A029-4BD3-AEF0-F9D5A6DA5CC1}|Biblioteca\\Biblioteca.csproj|c:\\users\\acer nitro v 15\\source\\repos\\biblioteca\\biblioteca\\data\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{72255802-A029-4BD3-AEF0-F9D5A6DA5CC1}|Biblioteca\\Biblioteca.csproj|solutionrelative:biblioteca\\data\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{3AB1DC82-A9FE-F0AD-2BCF-980D2D370EA7}|Biblioteca\\Biblioteca.csproj|c:\\users\\acer nitro v 15\\source\\repos\\biblioteca\\biblioteca\\models\\libros.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3AB1DC82-A9FE-F0AD-2BCF-980D2D370EA7}|Biblioteca\\Biblioteca.csproj|solutionrelative:biblioteca\\models\\libros.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{72255802-A029-4BD3-AEF0-F9D5A6DA5CC1}|Biblioteca\\Biblioteca.csproj|c:\\users\\acer nitro v 15\\source\\repos\\biblioteca\\biblioteca\\models\\prestamos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{72255802-A029-4BD3-AEF0-F9D5A6DA5CC1}|Biblioteca\\Biblioteca.csproj|solutionrelative:biblioteca\\models\\prestamos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{3AB1DC82-A9FE-F0AD-2BCF-980D2D370EA7}|Biblioteca\\Biblioteca.csproj|c:\\users\\acer nitro v 15\\source\\repos\\biblioteca\\biblioteca\\models\\usuarios.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3AB1DC82-A9FE-F0AD-2BCF-980D2D370EA7}|Biblioteca\\Biblioteca.csproj|solutionrelative:biblioteca\\models\\usuarios.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{72255802-A029-4BD3-AEF0-F9D5A6DA5CC1}|Biblioteca\\Biblioteca.csproj|c:\\users\\acer nitro v 15\\source\\repos\\biblioteca\\biblioteca\\models\\usuarios.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{72255802-A029-4BD3-AEF0-F9D5A6DA5CC1}|Biblioteca\\Biblioteca.csproj|solutionrelative:biblioteca\\models\\usuarios.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{3AB1DC82-A9FE-F0AD-2BCF-980D2D370EA7}|Biblioteca\\Biblioteca.csproj|c:\\users\\acer nitro v 15\\source\\repos\\biblioteca\\biblioteca\\models\\prestamos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3AB1DC82-A9FE-F0AD-2BCF-980D2D370EA7}|Biblioteca\\Biblioteca.csproj|solutionrelative:biblioteca\\models\\prestamos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{72255802-A029-4BD3-AEF0-F9D5A6DA5CC1}|Biblioteca\\Biblioteca.csproj|c:\\users\\acer nitro v 15\\source\\repos\\biblioteca\\biblioteca\\models\\libros.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{72255802-A029-4BD3-AEF0-F9D5A6DA5CC1}|Biblioteca\\Biblioteca.csproj|solutionrelative:biblioteca\\models\\libros.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{3AB1DC82-A9FE-F0AD-2BCF-980D2D370EA7}|Biblioteca\\Biblioteca.csproj|c:\\users\\acer nitro v 15\\source\\repos\\biblioteca\\biblioteca\\data\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3AB1DC82-A9FE-F0AD-2BCF-980D2D370EA7}|Biblioteca\\Biblioteca.csproj|solutionrelative:biblioteca\\data\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -35,64 +35,64 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "_ViewStart.cshtml",
-              "DocumentMoniker": "C:\\Users\\ACER NITRO V 15\\source\\repos\\Biblioteca\\Biblioteca\\Areas\\Identity\\Pages\\_ViewStart.cshtml",
-              "RelativeDocumentMoniker": "Biblioteca\\Areas\\Identity\\Pages\\_ViewStart.cshtml",
-              "ToolTip": "C:\\Users\\ACER NITRO V 15\\source\\repos\\Biblioteca\\Biblioteca\\Areas\\Identity\\Pages\\_ViewStart.cshtml*",
-              "RelativeToolTip": "Biblioteca\\Areas\\Identity\\Pages\\_ViewStart.cshtml*",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAEAAAAUAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2026-09-27T01:41:07.697Z",
+              "Title": "20260927034356_Init.cs",
+              "DocumentMoniker": "C:\\Users\\ACER NITRO V 15\\source\\repos\\Biblioteca\\Biblioteca\\Migrations\\20260927034356_Init.cs",
+              "RelativeDocumentMoniker": "Biblioteca\\Migrations\\20260927034356_Init.cs",
+              "ToolTip": "C:\\Users\\ACER NITRO V 15\\source\\repos\\Biblioteca\\Biblioteca\\Migrations\\20260927034356_Init.cs",
+              "RelativeToolTip": "Biblioteca\\Migrations\\20260927034356_Init.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-09-27T03:43:56.971Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 4,
               "Title": "AppDBContext.cs",
               "DocumentMoniker": "C:\\Users\\ACER NITRO V 15\\source\\repos\\Biblioteca\\Biblioteca\\Data\\AppDBContext.cs",
               "RelativeDocumentMoniker": "Biblioteca\\Data\\AppDBContext.cs",
               "ToolTip": "C:\\Users\\ACER NITRO V 15\\source\\repos\\Biblioteca\\Biblioteca\\Data\\AppDBContext.cs",
               "RelativeToolTip": "Biblioteca\\Data\\AppDBContext.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-09-27T01:04:15.386Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "Prestamos.cs",
               "DocumentMoniker": "C:\\Users\\ACER NITRO V 15\\source\\repos\\Biblioteca\\Biblioteca\\Models\\Prestamos.cs",
               "RelativeDocumentMoniker": "Biblioteca\\Models\\Prestamos.cs",
               "ToolTip": "C:\\Users\\ACER NITRO V 15\\source\\repos\\Biblioteca\\Biblioteca\\Models\\Prestamos.cs",
               "RelativeToolTip": "Biblioteca\\Models\\Prestamos.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAABAAAAAAAAAAA==",
+              "ViewState": "AgIAAAwAAAAAAAAAAAAYwBEAAABAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-09-27T01:01:28.141Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 2,
               "Title": "Usuarios.cs",
               "DocumentMoniker": "C:\\Users\\ACER NITRO V 15\\source\\repos\\Biblioteca\\Biblioteca\\Models\\Usuarios.cs",
               "RelativeDocumentMoniker": "Biblioteca\\Models\\Usuarios.cs",
               "ToolTip": "C:\\Users\\ACER NITRO V 15\\source\\repos\\Biblioteca\\Biblioteca\\Models\\Usuarios.cs",
               "RelativeToolTip": "Biblioteca\\Models\\Usuarios.cs",
-              "ViewState": "AgIAAAwAAAAAAAAAAAAuwBkAAABeAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAiwBkAAABeAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-09-27T01:00:49.482Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 1,
               "Title": "Libros.cs",
               "DocumentMoniker": "C:\\Users\\ACER NITRO V 15\\source\\repos\\Biblioteca\\Biblioteca\\Models\\Libros.cs",
               "RelativeDocumentMoniker": "Biblioteca\\Models\\Libros.cs",
               "ToolTip": "C:\\Users\\ACER NITRO V 15\\source\\repos\\Biblioteca\\Biblioteca\\Models\\Libros.cs",
               "RelativeToolTip": "Biblioteca\\Models\\Libros.cs",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAAABYAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAcwBYAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-09-27T01:00:07.226Z",
               "EditorCaption": ""

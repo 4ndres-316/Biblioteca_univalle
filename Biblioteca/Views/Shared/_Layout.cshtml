@@ -3,46 +3,103 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>@ViewData["Title"] - Biblioteca UPV Sucre</title>
+    <title>@ViewData["Title"] - Biblioteca Univalle Sucre</title>
     <script type="importmap"></script>
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
     <link rel="stylesheet" href="~/Biblioteca.styles.css" asp-append-version="true" />
     <style>
-        body { background-color: #f8f9fa; }
-        .navbar-brand span { font-weight: 700; color: #0d6efd; }
-        .nav-link.active { font-weight: 600; }
-        .sidebar { min-height: calc(100vh - 56px); background: #fff; border-right: 1px solid #dee2e6; padding-top: 1rem; }
-        .sidebar .nav-link { color: #495057; border-radius: 0.375rem; margin-bottom: 2px; }
-        .sidebar .nav-link:hover { background-color: #e9ecef; color: #0d6efd; }
-        .sidebar .nav-link.active { background-color: #0d6efd; color: #fff; }
-        .sidebar .nav-section { font-size: .7rem; text-transform: uppercase; letter-spacing: .08em; color: #6c757d; padding: .5rem .75rem .25rem; }
+        :root {
+            --guindo:      #7B1034;
+            --guindo-dark: #5a0b24;
+            --gris:        #6c757d;
+            --gris-claro:  #f4f4f4;
+            --gris-borde:  #dee2e6;
+        }
+
+        body { background-color: var(--gris-claro); }
+
+        /* Navbar */
+        .navbar-guindo { background-color: var(--guindo) !important; }
+
+        /* Sidebar */
+        .sidebar {
+            min-height: calc(100vh - 56px);
+            background: #fff;
+            border-right: 1px solid var(--gris-borde);
+            padding-top: 1rem;
+        }
+        .sidebar .nav-link {
+            color: #495057;
+            border-radius: 0.375rem;
+            margin-bottom: 2px;
+        }
+        .sidebar .nav-link:hover {
+            background-color: #f0e6ea;
+            color: var(--guindo);
+        }
+        .sidebar .nav-link.active {
+            background-color: var(--guindo);
+            color: #fff;
+        }
+        .sidebar .nav-section {
+            font-size: .68rem;
+            text-transform: uppercase;
+            letter-spacing: .08em;
+            color: var(--gris);
+            padding: .5rem .75rem .25rem;
+        }
+
+        /* Contenido */
         .main-content { padding: 1.5rem; }
+
+        /* Botones guindo */
+        .btn-guindo {
+            background-color: var(--guindo);
+            border-color: var(--guindo);
+            color: #fff;
+        }
+        .btn-guindo:hover {
+            background-color: var(--guindo-dark);
+            border-color: var(--guindo-dark);
+            color: #fff;
+        }
+        .btn-outline-guindo {
+            color: var(--guindo);
+            border-color: var(--guindo);
+        }
+        .btn-outline-guindo:hover {
+            background-color: var(--guindo);
+            color: #fff;
+        }
     </style>
 </head>
 <body>
-    <!-- Barra superior -->
-    <nav class="navbar navbar-expand-sm navbar-dark bg-primary shadow-sm">
+    <!-- Navbar superior -->
+    <nav class="navbar navbar-expand-sm navbar-guindo shadow-sm">
         <div class="container-fluid">
-            <a class="navbar-brand d-flex align-items-center gap-2" asp-controller="Home" asp-action="Index">
-                <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="white" class="bi bi-book-half" viewBox="0 0 16 16">
+            <a class="navbar-brand d-flex align-items-center gap-2 text-white fw-bold"
+               asp-controller="Home" asp-action="Index">
+                <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="white"
+                     class="bi bi-book-half" viewBox="0 0 16 16">
                     <path d="M8.5 2.687c.654-.689 1.782-.886 3.112-.752 1.234.124 2.503.523 3.388.893v9.923c-.918-.35-2.107-.692-3.287-.81-1.094-.111-2.278-.039-3.213.492zM8 1.783C7.015.936 5.587.81 4.287.94c-1.514.153-3.042.672-3.994 1.105A.5.5 0 0 0 0 2.5v11a.5.5 0 0 0 .707.455c.882-.4 2.303-.881 3.68-1.02 1.409-.142 2.59.087 3.223.877a.5.5 0 0 0 .78 0c.633-.79 1.814-1.019 3.222-.877 1.378.139 2.8.62 3.681 1.02A.5.5 0 0 0 16 13.5v-11a.5.5 0 0 0-.293-.455c-.952-.433-2.48-.952-3.994-1.105C10.413.809 8.985.936 8 1.783"/>
                 </svg>
-                <span class="text-white">Biblioteca</span>
-                <small class="text-white-50 d-none d-md-inline" style="font-size:.7rem;">UPV Sucre</small>
+                Biblioteca
+                <small class="text-white-50 d-none d-md-inline fw-normal" style="font-size:.72rem;">
+                    Univalle Sucre
+                </small>
             </a>
 
             <div class="ms-auto d-flex align-items-center gap-3">
                 @if (User.Identity != null && User.Identity.IsAuthenticated)
                 {
-                    <!-- Badge de rol -->
                     @if (User.IsInRole("Administrador"))
                     {
-                        <span class="badge bg-danger">Administrador</span>
+                        <span class="badge bg-white text-danger">Administrador</span>
                     }
                     else if (User.IsInRole("Bibliotecario"))
                     {
-                        <span class="badge bg-light text-primary">Bibliotecario</span>
+                        <span class="badge bg-white" style="color:var(--guindo)">Bibliotecario</span>
                     }
                     else
                     {
@@ -51,16 +108,15 @@
 
                     <span class="text-white-50 small d-none d-md-inline">@User.Identity.Name</span>
 
-                    <!-- Logout -->
-                    <form asp-area="Identity" asp-page="/Account/Logout"
-                          asp-route-returnUrl="@Url.Action("Index", "Home", new { area = "" })"
-                          method="post" class="mb-0">
+                    <form asp-controller="Account" asp-action="Logout" method="post" class="mb-0">
+                        @Html.AntiForgeryToken()
                         <button type="submit" class="btn btn-sm btn-outline-light">Cerrar sesión</button>
                     </form>
                 }
                 else
                 {
-                    <a asp-area="Identity" asp-page="/Account/Login" class="btn btn-sm btn-outline-light">Iniciar sesión</a>
+                    <a asp-controller="Account" asp-action="Login"
+                       class="btn btn-sm btn-outline-light">Iniciar sesión</a>
                 }
             </div>
         </div>
@@ -71,35 +127,32 @@
 
             @if (User.Identity != null && User.Identity.IsAuthenticated)
             {
-                <!-- Sidebar de navegación lateral -->
                 <nav class="col-md-2 d-none d-md-block sidebar">
 
-                    <!-- Dashboard -->
                     <div class="nav-section">Principal</div>
                     <ul class="nav flex-column px-2 mb-2">
                         <li class="nav-item">
                             <a class="nav-link @(ViewData["Title"]?.ToString()?.Contains("Dashboard") == true ? "active" : "")"
                                asp-controller="Home" asp-action="Index">
-                                🏠 Dashboard
+                                Dashboard
                             </a>
                         </li>
                     </ul>
 
                     @if (User.IsInRole("Administrador") || User.IsInRole("Bibliotecario"))
                     {
-                        <!-- Libros -->
                         <div class="nav-section">Gestión</div>
                         <ul class="nav flex-column px-2 mb-2">
                             <li class="nav-item">
                                 <a class="nav-link @(ViewData["Title"]?.ToString()?.Contains("Libro") == true ? "active" : "")"
                                    asp-controller="Libros" asp-action="Index">
-                                    📚 Libros
+                                    Libros
                                 </a>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link @(ViewData["Title"]?.ToString()?.Contains("Préstamo") == true || ViewData["Title"]?.ToString()?.Contains("Prestamo") == true ? "active" : "")"
                                    asp-controller="Prestamos" asp-action="Index">
-                                    🔄 Préstamos
+                                    Préstamos
                                 </a>
                             </li>
                         </ul>
@@ -107,13 +160,12 @@
 
                     @if (User.IsInRole("Administrador"))
                     {
-                        <!-- Usuarios: solo Administrador -->
                         <div class="nav-section">Administración</div>
                         <ul class="nav flex-column px-2 mb-2">
                             <li class="nav-item">
                                 <a class="nav-link @(ViewData["Title"]?.ToString()?.Contains("Usuario") == true ? "active" : "")"
                                    asp-controller="Usuarios" asp-action="Index">
-                                    👥 Usuarios
+                                    Usuarios
                                 </a>
                             </li>
                         </ul>
@@ -121,19 +173,18 @@
 
                     @if (User.IsInRole("Usuario"))
                     {
-                        <!-- Catálogo y préstamos propios -->
                         <div class="nav-section">Mi Biblioteca</div>
                         <ul class="nav flex-column px-2 mb-2">
                             <li class="nav-item">
                                 <a class="nav-link @(ViewData["Title"]?.ToString()?.Contains("Libro") == true ? "active" : "")"
                                    asp-controller="Libros" asp-action="Index">
-                                    📖 Catálogo
+                                    Catálogo
                                 </a>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link @(ViewData["Title"]?.ToString()?.Contains("Préstamo") == true || ViewData["Title"]?.ToString()?.Contains("Prestamo") == true ? "active" : "")"
                                    asp-controller="Prestamos" asp-action="Index">
-                                    📋 Mis Préstamos
+                                    Mis Préstamos
                                 </a>
                             </li>
                         </ul>
@@ -141,14 +192,12 @@
 
                 </nav>
 
-                <!-- Contenido principal con sidebar -->
                 <main class="col-md-10 main-content">
                     @RenderBody()
                 </main>
             }
             else
             {
-                <!-- Sin autenticar: sin sidebar, contenido centrado -->
                 <main class="col-12 main-content">
                     @RenderBody()
                 </main>
@@ -157,9 +206,9 @@
         </div>
     </div>
 
-    <footer class="border-top footer text-muted py-2 mt-3">
+    <footer class="border-top footer text-muted py-2 mt-3" style="background:#fff;">
         <div class="container-fluid px-3">
-            <small>&copy; 2026 - Biblioteca UPV Sede Sucre</small>
+            <small>&copy; 2026 - Biblioteca Univalle Sede Sucre</small>
         </div>
     </footer>
 
