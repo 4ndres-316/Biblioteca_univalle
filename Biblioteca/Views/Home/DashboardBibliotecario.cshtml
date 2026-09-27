@@ -1,0 +1,65 @@
+@{
+    ViewData["Title"] = "Dashboard - Bibliotecario";
+}
+
+<div class="d-flex justify-content-between align-items-center mb-4">
+    <div>
+        <h2 class="mb-0">Panel del Bibliotecario</h2>
+        <small class="text-muted">Universidad Privada del Valle &mdash; Sede Sucre</small>
+    </div>
+    <span class="badge bg-primary fs-6">Bibliotecario</span>
+</div>
+
+<!-- Tarjetas de resumen -->
+<div class="row g-4 mb-4">
+    <!-- Libros -->
+    <div class="col-md-6">
+        <div class="card border-0 shadow-sm h-100">
+            <div class="card-body d-flex align-items-center gap-3">
+                <div class="rounded-circle bg-primary bg-opacity-10 p-3">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="#0d6efd" class="bi bi-book" viewBox="0 0 16 16">
+                        <path d="M1 2.828c.885-.37 2.154-.769 3.388-.893 1.33-.134 2.458.063 3.112.752v9.746c-.935-.53-2.12-.603-3.213-.493-1.18.12-2.37.461-3.287.811zm7.5-.141c.654-.689 1.782-.886 3.112-.752 1.234.124 2.503.523 3.388.893v9.923c-.918-.35-2.107-.692-3.287-.81-1.094-.111-2.278-.039-3.213.492zM8 1.783C7.015.936 5.587.81 4.287.94c-1.514.153-3.042.672-3.994 1.105A.5.5 0 0 0 0 2.5v11a.5.5 0 0 0 .707.455c.882-.4 2.303-.881 3.68-1.02 1.409-.142 2.59.087 3.223.877a.5.5 0 0 0 .78 0c.633-.79 1.814-1.019 3.222-.877 1.378.139 2.8.62 3.681 1.02A.5.5 0 0 0 16 13.5v-11a.5.5 0 0 0-.293-.455c-.952-.433-2.48-.952-3.994-1.105C10.413.809 8.985.936 8 1.783"/>
+                    </svg>
+                </div>
+                <div>
+                    <div class="text-muted small">Total Libros</div>
+                    <div class="fs-3 fw-bold text-primary">@ViewBag.TotalLibros</div>
+                    <div class="text-success small">@ViewBag.LibrosActivos disponibles</div>
+                </div>
+            </div>
+            <div class="card-footer bg-transparent border-0">
+                <a asp-controller="Libros" asp-action="Index" class="btn btn-sm btn-outline-primary w-100">Ver Libros</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Préstamos -->
+    <div class="col-md-6">
+        <div class="card border-0 shadow-sm h-100">
+            <div class="card-body d-flex align-items-center gap-3">
+                <div class="rounded-circle bg-warning bg-opacity-10 p-3">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="#ffc107" class="bi bi-arrow-left-right" viewBox="0 0 16 16">
+                        <path fill-rule="evenodd" d="M1 11.5a.5.5 0 0 0 .5.5h11.793l-3.147 3.146a.5.5 0 0 0 .708.708l4-4a.5.5 0 0 0 0-.708l-4-4a.5.5 0 0 0-.708.708L13.293 11H1.5a.5.5 0 0 0-.5.5m14-7a.5.5 0 0 1-.5.5H2.707l3.147 3.146a.5.5 0 1 1-.708.708l-4-4a.5.5 0 0 1 0-.708l4-4a.5.5 0 1 1 .708.708L2.707 4H14.5a.5.5 0 0 1 .5.5"/>
+                    </svg>
+                </div>
+                <div>
+                    <div class="text-muted small">Total Préstamos</div>
+                    <div class="fs-3 fw-bold text-warning">@ViewBag.TotalPrestamos</div>
+                    <div class="text-success small">@ViewBag.PrestamosActivos activos</div>
+                </div>
+            </div>
+            <div class="card-footer bg-transparent border-0">
+                <a asp-controller="Prestamos" asp-action="Index" class="btn btn-sm btn-outline-warning w-100">Ver Préstamos</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Accesos rápidos -->
+<div class="card border-0 shadow-sm">
+    <div class="card-header bg-transparent fw-semibold">Accesos rápidos</div>
+    <div class="card-body d-flex flex-wrap gap-2">
+        <a asp-controller="Libros"    asp-action="Create" class="btn btn-primary">+ Nuevo Libro</a>
+        <a asp-controller="Prestamos" asp-action="Create" class="btn btn-warning text-dark">+ Nuevo Préstamo</a>
+    </div>
+</div>
